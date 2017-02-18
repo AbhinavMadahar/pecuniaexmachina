@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1.center= title
+	p.center Welcome to #{title}
+	.container
+		.col.s8
+			form(name="target_url", action="/main", method="post")
+				.input-field
+					input(id="username" name="username" type="text" class="validate")
+					label(for="username") User ID
+				.input-field
+					input(id="password" name="password" type="password" class="validate")
+					label(for="password") Password
+				.container.center
+					input(type="submit", Value="Submit").btn.btn-primary.red.lighten-1
