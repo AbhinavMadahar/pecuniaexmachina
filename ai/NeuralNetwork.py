@@ -4,7 +4,7 @@ import random
 
 TradingDay = namedtuple("TradingDay", ["high", "low", "open", "close", "date"])
 
-dtanh = lambda z: 1 - np.tanh(z) ** 2
+dtanh = lambda z: 1.0 - np.tanh(z)**2
 
 prod = lambda iterable: reduce(lambda a, b: a * b, iterable, 1)
 geomean = lambda data: prod(data) ** (1 / len(data))
@@ -29,7 +29,7 @@ class NeuralNetwork(object):
             weekly_percent_change = geomean(daily_percent_changes)
             greatest_weekly_percent_change = max([weekly_percent_change, greatest_weekly_percent_change])
 
-        least_weekly_percent_change = -float("inf")
+        least_weekly_percent_change = float("inf")
         for k in xrange(len(trading_days) / 5):
             daily_percent_changes = [trading_days[k+i+1]["open"] / trading_days[k+i]["open"] - 1 for i in xrange(0, 5)]
             weekly_percent_change = geomean(daily_percent_changes)
@@ -87,14 +87,19 @@ class NeuralNetwork(object):
             activations.append(activation)
 
         # now go back
-        delta = self.dCdx(activations[-1], y) * dtanh(zs[-1])
+        error = self.dCdx(activations[-1], y)
+        delta = dtanh(zs[-1]) * error
+
         nabla_b[-1] = delta # BP3
         nabla_w[-1] = np.dot(delta, np.transpose(activations[-2])) # BP2
 
         for l in xrange(1, self.num_layers - 1):
             z = zs[-l]
             zp = dtanh(z) # z'
-            delta = np.dot(np.transpose(self.weights[-l+1]), delta) * zp
+            trans = np.transpose(self.weights[-l+1])
+            assert trans.shape == (5,5)
+            #delta = np.dot(np.transpose(self.weights[-l+1]), delta) * zp
+            delta = np.dot(trans, delta) * zp
             nabla_b[-l] = delta
             nabla_w[-l] = np.dot(delta, np.transpose(activations[-l-1]))
         return (nabla_b, nabla_w)
@@ -108,4 +113,4 @@ class NeuralNetwork(object):
         return sum(int(x == y) for (x, y) in test_results)
 
     def dCdx(self, output_activations, y):
-        return [a - y for a in output_activations]
+        return [np.abs(y - a)**2 for a in output_activations]
