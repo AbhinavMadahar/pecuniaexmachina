@@ -2,7 +2,7 @@ from NeuralNetwork import NeuralNetwork
 import json
 
 with open('stocks.json') as data_file:
-    data = json.load(data_file)
+	data = json.load(data_file)
 
 weekly_changes = {}
 for tick in data:
