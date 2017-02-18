@@ -113,4 +113,4 @@ class NeuralNetwork(object):
         return sum(int(x == y) for (x, y) in test_results)
 
     def dCdx(self, output_activations, y):
-        return [np.abs(y - a)**2 for a in output_activations]
+        return [a - y for a in output_activations]
