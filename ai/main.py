@@ -12,3 +12,6 @@ for tick in data:
     days = data[tick]
     net = NeuralNetwork(tick, days, [len(days), 5, 1])
     net.SGD(30, len(days) / 100, 2)
+
+def geomean(nums):
+    return (reduce(lambda x, y: x*y, nums))**(1.0/len(nums))
