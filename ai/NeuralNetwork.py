@@ -1,76 +1,69 @@
 import numpy as np
-from collections import namedtuple
-import random
+from random import shuffle
+from math import sqrt
 
-TradingDay = namedtuple("TradingDay", ["high", "low", "open", "close", "date"])
+sigmoid = lambda z: 1 / (1 + np.exp(-z))
+sigmoidprime = lambda z: sigmoid(z) * (1 - sigmoid(z)) # derivate of sigmoid function
 
-dtanh = lambda z: 1.0 - np.tanh(z)**2
-
+# the geometric mean is used a lot in finance because it determines the average percent change
 prod = lambda iterable: reduce(lambda a, b: a * b, iterable, 1)
 geomean = lambda data: prod(data) ** (1 / len(data))
+arthmean = lambda data: sum(data) / len(data)
+
+distance_between = lambda a, b: sqrt(sum((a[j] - b[j]) ** 2 for j in xrange(len(a))))
+
+def chunk(array, n):
+    chunks = []
+    for i in xrange(0, len(array), n):
+        chunks.append(array[i:i+n])
+    return chunks
 
 class NeuralNetwork(object):
-    # stock_tick is something like "APPL" that is used to look up stocks
-    # trading_days is an array of TradingDay objects
-    # sizes is an array whose indeces are the layers and values at each index is the length of the
-    # layer in terms of neurons
-    def __init__(self, stock_tick, trading_days, sizes):
-        self.stock_tick = stock_tick
-        self.trading_days = trading_days
+    # prices is a list of priceing prices in chronological order for the given stock
+    # sizes is the size of each layer in the network
+    def __init__(self, prices, sizes):
+        self.prices = prices
 
-        self.num_layers = len(sizes)
         self.sizes = sizes
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.biases = [np.random.randn(y) for y in sizes[1:]]
         self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
-
-        greatest_weekly_percent_change = -float("inf")
-        for k in xrange(len(trading_days) / 5):
-            daily_percent_changes = [trading_days[k+i+1]["open"] / trading_days[k+i]["open"] - 1 for i in xrange(0, 5)]
-            weekly_percent_change = geomean(daily_percent_changes)
-            greatest_weekly_percent_change = max([weekly_percent_change, greatest_weekly_percent_change])
-
-        least_weekly_percent_change = float("inf")
-        for k in xrange(len(trading_days) / 5):
-            daily_percent_changes = [trading_days[k+i+1]["open"] / trading_days[k+i]["open"] - 1 for i in xrange(0, 5)]
-            weekly_percent_change = geomean(daily_percent_changes)
-            least_weekly_percent_change = min([weekly_percent_change, least_weekly_percent_change])
-
-        self.greatest_weekly_percent_change = greatest_weekly_percent_change
-        self.least_weekly_percent_change = least_weekly_percent_change
-
-    def fit_to_range(self, weekly_percent_change):
-        increase = weekly_percent_change / self.greatest_weekly_percent_change
-        return increase + self.least_weekly_percent_change
 
     def feedforward(self, a):
         for b, w in zip(self.biases, self.weights):
-            a = np.tanh(np.dot(w, a) + b)
+            # because w is a matrix, np.dot(w, a) is equivilant to matrix multiplication
+            a = sigmoid(np.dot(w, a) + b)
         return a
 
-    def SGD(self, epochs, mini_batch_size, learning_rate):
-        n = len(self.trading_days)
-        for _ in xrange(epochs): # for epochs number of times
-            random.shuffle(self.trading_days)
+    # applies gradient descent on the entire data set for that stock at once because it's small
+    # epochs is the number of times to apply gradient descent
+    def train(self, epochs, learning_rate):
+        learning_rate = float(learning_rate) # sorry for the type-casting lol
+        for n in xrange(epochs): # for epochs number of times
+            nabla_b = [np.zeros(b.shape) for b in self.biases] # grad. of cost w/ respect to bias
+            nabla_w = [np.zeros(w.shape) for w in self.weights] # grad. of cost w/ respect to weight
 
-            # group the training data into batches of length
-            mini_batches = [self.trading_days[k:k+mini_batch_size] for k in xrange(0, n, mini_batch_size)]
+            # calculate y using the weekly percent changes
+            # if the weekly_percent_change was positive
+            prices = self.prices
+            weeks = chunk(prices, self.sizes[0])
+            for i, week in enumerate(weeks[:-1]):
+                next_week = weeks[i+1]
+                change_in_average_value = arthmean(next_week) / arthmean(week) - 1
+                x = week
+                if change_in_average_value > 0:
+                    y = (1, 0)
+                elif change_in_average_value < 0:
+                    y = (0, 1)
+                else:
+                    y = (0, 0)
 
-            for mini_batch in mini_batches:
-                self.learn_from_mini_batch(mini_batch)
+                # calculate and add the necessary changes to bias and weight
+                delta_nabla_b, delta_nabla_w = self.backprop(x, y)
+                nabla_b = [nb + dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
+                nabla_w = [nw + dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
 
-    # mini_batch is an array of arrays of openning values for a given stock
-    def learn_from_mini_batch(self, mini_batch):
-        nabla_b = [np.zeros(b.shape) for b in self.biases]
-        nabla_w = [np.zeros(w.shape) for w in self.weights]
-
-        opens = [day["open"] for day in mini_batch]
-        daily_percent_changes = [opens[k+1] / day - 1 for k, day in enumerate(opens[:-1])]
-        weekly_percent_change = geomean(daily_percent_changes)
-        y = self.fit_to_range(weekly_percent_change)
-
-        delta_nabla_b, delta_nabla_w = self.backprop(opens, y)
-        nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
-        nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
+            self.weights = [w - (learning_rate / len(self.prices)) * nw for w, nw in zip(self.weights, nabla_w)]
+            self.biases = [b - (learning_rate / len(self.prices)) * nb for b, nb in zip(self.biases, nabla_b)]
 
     def backprop(self, x, y):
         nabla_w = [np.zeros(w.shape) for w in self.weights]
@@ -83,34 +76,69 @@ class NeuralNetwork(object):
         for b, w in zip(self.biases, self.weights):
             z = np.dot(w, activation) + b # find the new weighed input
             zs.append(z)
-            activation = np.tanh(z)
+            activation = sigmoid(z)
             activations.append(activation)
 
         # now go back
-        error = self.dCdx(activations[-1], y)
-        delta = dtanh(zs[-1]) * error
 
-        nabla_b[-1] = delta # BP3
-        nabla_w[-1] = np.dot(delta, np.transpose(activations[-2])) # BP2
+        # let's do this literately
+        # backpropagation is all about delta, the partial derivate of C with respect to z[l][j]
+        # z[l][j] is the weighed input (w[l][j] dot a + b) of the jth neuron of the lth layer
+        # a[l][j] = sigmoid(w[l][j] dot a + b)
+        # a[l][j] = sigmoid(z[l][j])
+        # we will now use (BP1) to find delta
+        # we will refer to the partial derivate of C with respect to a[l][j] as dC/da
+        # dC/dz = dC/da * da/dz
+        # delta = dC/da * d/dz(sigmoid(z))
+        # delta = dC/da * sigmoid'(z)
+        # we can calculate dC/da with self.dCda and we have the sigmoidprime function already
+        # now, we can calculate delta
+        dCda = self.dCda(activations[-1], y)
+        dadz = sigmoidprime(zs[-1])
+        delta = dCda * dadz
 
-        for l in xrange(1, self.num_layers - 1):
+        # if b is the bias of a given neuron with weighed input z,
+        # dz/db = 1
+        # dC/db = dC/dz * dz/db
+        # dC/db = dC/dz * 1
+        # dC/db = dC/dz
+        # dC/db = delta (i.e. BP3)
+        # apply this for all the neurons in a given layer to get nabla_b, the gradient of cost with
+        # respect to the biases of the neurons in the current layer, the output layer
+        nabla_b[-1] = delta
+
+        # we can now calculate the gradient of cost with respect to the weights of the output layer
+        # self.weights[l][j][k] is the weight of an input from k to j, but error (delta) propagates
+        # backwards through the neural network, so we want the weight from j to k, which we can
+        # find by transposing self.weights[l] (i.e. np.transpose(self.weights[l]))
+        # because we're trying to found the gradient of the cost with respect to the weight of the
+        # connections going to the output layer, -1, we need to find nabla_w[-1]
+        # nabla_w[l][j][k] = a[l-1][k] x delta[l][j]
+        # where a[l-1][k] is the vector of activations of the neurons in the previous layer
+        nabla_w[-1] = np.matmul([[d] for d in delta], [activations[-2]])
+
+        for l in xrange(2, len(self.sizes)):
             z = zs[-l]
-            zp = dtanh(z) # z'
-            trans = np.transpose(self.weights[-l+1])
-            assert trans.shape == (5,5)
-            #delta = np.dot(np.transpose(self.weights[-l+1]), delta) * zp
-            delta = np.dot(trans, delta) * zp
+            zp = sigmoidprime(z) # z'
+            delta = np.dot(np.transpose(self.weights[-l+1]), delta) * zp
             nabla_b[-l] = delta
-            nabla_w[-l] = np.dot(delta, np.transpose(activations[-l-1]))
+            nabla_w[-l] = np.matmul([[d] for d in delta], [activations[-l-1]])
+
         return (nabla_b, nabla_w)
 
-    def evaluate(self, test_data):
-        """Return the number of test inputs for which the neural
-        network outputs the correct result. Note that the neural
-        network's output is assumed to be the index of whichever
-        neuron in the final layer has the highest activation."""
-        test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
-        return sum(int(x == y) for (x, y) in test_results)
+        #/literate python
 
-    def dCdx(self, output_activations, y):
-        return [a - y for a in output_activations]
+    def decision(self, inputs):
+        output = self.feedforward(inputs)
+        return 0 if output[0] > output[1] else 1
+
+    def evaluate(self, test_data):
+        cost = 0
+        for x, y in test_data:
+            output = self.feedforward(x)
+            decision = (output[1] - output[0] + 1) / 2
+            cost += (decision - y) ** 2
+        return cost / len(test_data)
+
+    def dCda(self, output_activations, y):
+        return output_activations - y
