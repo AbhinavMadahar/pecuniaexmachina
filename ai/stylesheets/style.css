@@ -1,0 +1,30 @@
+/* set the CSS */
+body { 
+	font: 12px Arial;
+	background: #f1f8e9;
+	margin: 5em;
+}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+text.shadow {
+    stroke: white;
+    stroke-width: 2.5px;
+    opacity: 0.9;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+#new_input {
+	height: 100vh;
+}

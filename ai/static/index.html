@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/materialize.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+</head>
+
+
+<body>
+<h1 class="center">Welcome to the wonderful world of Stock Prediction</h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row">
+<!-- set inputs for the query -->    
+<div id="new_input" class="center col s12 m12 l12">
+    <h6>STOCK:</h6>
+
+    <input class= "input-field" type="text" name="stock" id="stock" value="YHOO" 
+    style="width: 70px;">
+    <h6>START:</h6>
+    <input type="text" name="start" id="start" value="2015-01-13"
+    style="width: 80px;">
+    <h6>END:</h6>
+    <input type="text" name="end" id="end" value="2015-01-23" 
+    style="width: 80px;">
+    <br/>
+    <input type="submit" value="submit" class="btn-large waves-effect waves-light orange" onclick="updateData()" href="#main">
+    <script type="text/javascript" src="javascripts/init.js" ></script>
+    <!-- <a href="#main" id="start-button" class="btn-large waves-effect waves-light orange" onclick="updateData()">Get Started</a> -->
+</div>
+
+</div>
+</body>

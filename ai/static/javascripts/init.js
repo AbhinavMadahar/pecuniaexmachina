@@ -1,16 +1,8 @@
-(function($){
-  $(function(){
-
-    $('.button-collapse').sideNav();
-    $('.collapsible').collapsible();
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
 var high_list = []
 
 // Set the dimensions of the graph
-var margin = {top: 30, right: 0, bottom: 30, left: 122},
-    width = 1280 - margin.left - margin.right,
+var margin = {top: 30, right: 72, bottom: 30, left: 222},
+    width = 1080 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 // Parse the date / time
@@ -59,6 +51,7 @@ var inputURL = "http://query.yahooapis.com/v1/public/yql"+
     
     // console.log(m)
     data.query.results.quote.forEach(function(d) {
+        
         d.date = parseDate(d.Date);
         d.high = +d.High;
         d.low = +d.Low;
@@ -70,32 +63,12 @@ var inputURL = "http://query.yahooapis.com/v1/public/yql"+
 
         // i += 1;
 
-        // console.log(d.high, d.low)
-        if (high_list.length <10) {high_list.push(d.high)}        
+        console.log(d.high, d.low)
+        high_list.push(d.high)
     });
-    console.log(stock)
+    console.log("FFFFF")
     console.log(high_list)
-    var formated_list = ""
-    for (var i = high_list.length - 1; i >= 0; i--) {
-        if (i != 0) {formated_list += high_list[i] + ","}
-        else{
-            formated_list += high_list[i]
-        }
-    }
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:5000/api/recommendation?tick="+stock+"&highs="+formated_list        
-        // data: { tick: stock, location: "Boston" }
-    }).done(function (data){
-        console.log(data);
-        if (data == 1) {
-        $('#recommend').replaceWith('<h1 class="center">SELL SELL SELL</h1>');
-        console.log(document.getElementById('recommend'))
-        } else{
-          $('#recommend').replaceWith('<h1 class="center">BUY BUY BUY</h1>');  
-        }
-    });
-    // console.log(d3.max(data.query.results.quote, function(d) { return d.high; }));
+    console.log(d3.max(data.query.results.quote, function(d) { return d.high; }));
 
     // console.log(data.query.results.quote)
     // Scale the range of the data
@@ -145,6 +118,23 @@ var inputURL = "http://query.yahooapis.com/v1/public/yql"+
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
         .text(stock);
+
+    svg.append("circle")
+        .attr("r", 10)
+        .attr("cx",50)
+        .attr("cy",450)
+        .attr("fill", "green")
+
+    svg.append("circle")
+        .attr("r", 15)
+        .attr("cx",150)
+        .attr("cy",450)
+        .attr("fill", "green")
+    svg.append("circle")
+        .attr("r", 15)
+        .attr("cx",1280*0.34)
+        .attr("cy",420)
+        .attr("fill", "blue")
 });
 
 
@@ -153,7 +143,6 @@ var inputURL = "http://query.yahooapis.com/v1/public/yql"+
 // ** Update data section (Called from the onclick)
 function updateData() {
 
-var new_high_list = []
 var stock = document.getElementById('stock').value;
 var start = document.getElementById('start').value;
 var end = document.getElementById('end').value;
@@ -173,28 +162,7 @@ var inputURL = "http://query.yahooapis.com/v1/public/yql"+
             d.date = parseDate(d.Date);
             d.high = +d.High;
             d.low = +d.Low;
-            if (new_high_list.length <=11) {new_high_list.push(d.high)}
         });
-        var formated_list = ""
-        for (var i = new_high_list.length - 1; i >= 0; i--) {
-            if (i != 0) {formated_list += new_high_list[i] + ","}
-            else{
-                formated_list += new_high_list[i]
-            }
-        }
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:5000/api/recommendation?tick="+stock+"&highs="+formated_list        
-            // data: { tick: stock, location: "Boston" }
-        }).done(function (data){
-            console.log(data);
-            if (data == 1) {
-            $('#recommend').replaceWith('<h1 class="center">SELL SELL SELL</h1>');
-            console.log(document.getElementById('recommend'))
-            } else{
-                $('#recommend').replaceWith('<h1 class="center">BUY BUY BUY</h1>');
-            }
-        });      
 
         // Scale the range of the data
         x.domain(d3.extent(data.query.results.quote, function(d) {
