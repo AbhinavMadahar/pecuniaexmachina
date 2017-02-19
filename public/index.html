@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title> PECUNIAEXMACHINA</title>
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="javascripts/materialize.js"></script>
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/materialize.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+</head>
+
+<body>
+  <nav class="  light-green darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">PECUNIAEXMACHINA</a>
+      <ul class="right hide-on-med-and-down page-scoll">
+        <li><a href="#index-banner">Top</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav page-scoll">
+        <li><a href="#index-banner">Top</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav> 
+
+  <div class="main">
+
+    <div class="container center">
+        <div class="row header s12 m12 l12 ">
+            <h1>Welcome to the wonderful world of Stock Prediction</h1>
+        </div>    
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="row">
+<!-- set inputs for the query -->    
+      <div id="new_input" class="center col s12 m12 l12">
+        <h6>STOCK:</h6>
+        <input class= "input-field" type="text" name="stock" id="stock" value="CRY" 
+        style="width: 70px;">
+        <h6>START:</h6>
+        <input type="text" name="start" id="start" value="2015-01-05"
+        style="width: 80px;">
+        <h6>END:</h6>
+        <input type="text" name="end" id="end" value="2015-01-16" 
+        style="width: 80px;">
+        <br/>
+        
+        <a href="#main" id="start-button" class="btn-large waves-effect waves-light  light-green darken-4" onclick="updateData()">Get Started</a>
+      </div>
+    </div>
+  </div>
+  <div id="recommend" class="row">
+      <h1 class="center">The God Of Money is Thinking About It...</h1>
+  </div>
+
+  <div class="row center" id="main">
+  <div class="center" id="graph">
+      <script type="text/javascript" src="javascripts/init.js" ></script>    
+  </div>
+  </div>
+
+
+</body>
