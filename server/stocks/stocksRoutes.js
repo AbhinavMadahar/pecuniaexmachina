@@ -2,7 +2,7 @@ stockCtrl = require('./stocksController')
 
 const mountStockRoutes = app => {
   app.route('/api/stocks')
-    .post(stockCtrl.addStock)
+    .get(stockCtrl.getStock)
 };
 
 module.exports = mountStockRoutes;
