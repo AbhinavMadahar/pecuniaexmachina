@@ -18,7 +18,7 @@ The neural network is trained by being given the opening values for a given stoc
 
 ## API
 
-The NeuralNetwork accepts the opening values as its only constructor argument. It makes decisions based on 5 opening values, returning a list where the first value is a value in [0, 1] that recommends (1) or doesn't recommend (0) buying, and the second is the same but for selling.
+The NeuralNetwork accepts the opening values as its only constructor argument. It makes decisions based on 10 opening values, returning a list where the first value is a value in [0, 1] that recommends (1) or doesn't recommend (0) buying, and the second is the same but for selling.
 
 ```python
 from NeuralNetwork import NeuralNetwork
