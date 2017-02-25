@@ -1,0 +1,45 @@
+\documentclass[twocolumn]{article}
+\usepackage{authblk}
+\usepackage{blindtext} % generates lorem ipsums
+\usepackage[numbers,sort]{natbib}
+\usepackage{url}
+
+\begin{document}
+
+\date{\today}
+
+\title{Application of a Shallow Neural Network to Short-Term Stock Trading}
+
+\author[1]{Abhinav Madahar}
+\author[2]{Yuze Ma}
+\author[3]{Kunal Patel}
+\affil[1]{Millburn High School, \textit {abhinavmadahar@gmail.com}}
+\affil[2]{Rensselaer Polytechnic Institute, \textit {may7@rpi.edu}}
+\affil[3]{Cherokee High School, \textit {kunalgpatel00@gmail.com}}
+
+\maketitle
+
+\begin{abstract}
+\blindtext[1]
+\end{abstract}
+
+\section{Intro}
+\bibliographystyle{unsrtnat}
+
+Large companies (e.g. Google, Exxon Mobil, etc.) are not owned by a single person or a private group of individuals. Rather, these companies are split up into small pieces (stocks) which are then sold to any individual who can afford them. The value of a single share (another name for a stock) depends on many factors, primarily its current and expected future profits. For example, a stock in Apple (the largest company by total stock value) is sold at approximately \$140 \cite{yahooapple}. As a company grows, its stock increases in value; Amazon stock sold for \$18 in 1997 \cite{investopedia}, but is now worth over \$800 because of its massive growth since \cite{yahooamazon}. Stock investors try to buy shares in companies that will grow dramatically; an investor who bought shares of Amazon in 1997 would now be very rich.
+
+Many artificial intelligence techniques are applied to stock trading, such as genetic algorithms and probabilistic logic network \cite{wired}. Neural networks, a type of AI that simulates the human brain, have been applied to stock trading AIs, but have seen limited success because they work best for systems with clear patterns, whereas stock markets do not have very clear patterns \cite{hurwitz}.
+
+In a neural network, neurons are grouped into layers, which are combined to form a network that simulates a brain. A single neuron takes in many inputs from the neurons of the previous layer, multiples each by a weight, adds a constant bias, and runs the result through an activation function, often the sigmoid or hyperbolic tangent function. If we represent the inputs as a vector $x$, the weights as a vector $w$, the bias as a scalar $b$, the activation function as $f$, and the final output as a scalar $a$, then
+
+\begin{equation}
+a = f ( x \cdot w + b )
+\end{equation}
+
+A neuron accepts many values (vector) and outputs a single value (scalar), which is then sent to the next layer. By tuning the weights and biases, the neural network can learn how to interpret the data, a process called "training." A deep neural network has many layers, allowing it to find deeper patterns, the cause of its dramatic rise in usage in the past few years, especially for tasks like image recognition and natural language processing \cite{wired}. A shallow neural network is thus a neural network with only 1 or a handful of layers, making it simpler but less powerful.
+
+This study explores the utility of a shallow neural network on stock trading, specifically on deciding whether to buy or sell shares of a given company when given only stock information on said company.
+
+\bibliography{thebibliography}
+
+\end{document}
