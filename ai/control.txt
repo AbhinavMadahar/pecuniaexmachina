@@ -1,0 +1,1005 @@
+Reading HSD file...
+Done
+Testing stocks
+Testing MMM
+MMM was decided correctly
+Testing ABT
+ABT was decided correctly
+Testing ABBV
+ABBV was decided correctly
+Testing ACN
+ACN was decided correctly
+Testing ATVI
+ATVI was decided incorrectly
+Testing AYI
+AYI was decided incorrectly
+Testing ADBE
+ADBE was decided correctly
+Testing AAP
+AAP was decided correctly
+Testing AES
+AES was decided incorrectly
+Testing AET
+AET was decided incorrectly
+Testing AMG
+AMG was decided incorrectly
+Testing AFL
+AFL was decided correctly
+Testing A
+A was decided incorrectly
+Testing APD
+APD was decided correctly
+Testing AKAM
+AKAM was decided incorrectly
+Testing ALK
+ALK was decided correctly
+Testing ALB
+ALB was decided correctly
+Testing ALXN
+ALXN was decided correctly
+Testing ALLE
+ALLE was decided correctly
+Testing AGN
+AGN was decided correctly
+Testing ADS
+ADS was decided incorrectly
+Testing LNT
+LNT was decided correctly
+Testing ALL
+ALL was decided incorrectly
+Testing GOOGL
+GOOGL was decided incorrectly
+Testing GOOG
+GOOG was decided correctly
+Testing MO
+MO was decided correctly
+Testing AMZN
+AMZN was decided correctly
+Testing AEE
+AEE was decided correctly
+Testing AAL
+AAL was decided incorrectly
+Testing AEP
+AEP was decided incorrectly
+Testing AXP
+AXP was decided correctly
+Testing AIG
+AIG was decided correctly
+Testing AMT
+AMT was decided correctly
+Testing AWK
+AWK was decided incorrectly
+Testing AMP
+AMP was decided incorrectly
+Testing ABC
+ABC was decided correctly
+Testing AME
+AME was decided correctly
+Testing AMGN
+AMGN was decided incorrectly
+Testing APH
+APH was decided correctly
+Testing APC
+APC was decided correctly
+Testing ADI
+ADI was decided correctly
+Testing ANTM
+ANTM was decided incorrectly
+Testing AON
+AON was decided incorrectly
+Testing APA
+APA was decided incorrectly
+Testing AIV
+AIV was decided correctly
+Testing AAPL
+AAPL was decided correctly
+Testing AMAT
+AMAT was decided correctly
+Testing ADM
+ADM was decided correctly
+Testing AJG
+AJG was decided correctly
+Testing AIZ
+AIZ was decided incorrectly
+Testing T
+T was decided correctly
+Testing ADSK
+ADSK was decided incorrectly
+Testing ADP
+ADP was decided correctly
+Testing AN
+AN was decided correctly
+Testing AZO
+AZO was decided incorrectly
+Testing AVGO
+AVGO was decided incorrectly
+Testing AVB
+AVB was decided correctly
+Testing AVY
+AVY was decided incorrectly
+Testing BHI
+BHI was decided correctly
+Testing BLL
+BLL was decided incorrectly
+Testing BAC
+BAC was decided correctly
+Testing BCR
+BCR was decided incorrectly
+Testing BAX
+BAX was decided correctly
+Testing BBT
+BBT was decided correctly
+Testing BDX
+BDX was decided correctly
+Testing BBBY
+BBBY was decided correctly
+Testing BRK-B
+BRK-B was decided incorrectly
+Testing BBY
+BBY was decided correctly
+Testing BIIB
+BIIB was decided incorrectly
+Testing BLK
+BLK was decided correctly
+Testing HRB
+HRB was decided correctly
+Testing BA
+BA was decided incorrectly
+Testing BWA
+BWA was decided correctly
+Testing BXP
+BXP was decided correctly
+Testing BSX
+BSX was decided correctly
+Testing BMY
+BMY was decided incorrectly
+Testing BF-B
+BF-B was decided incorrectly
+Testing CHRW
+CHRW was decided correctly
+Testing CA
+CA was decided incorrectly
+Testing COG
+COG was decided incorrectly
+Testing CPB
+CPB was decided correctly
+Testing COF
+COF was decided correctly
+Testing CAH
+CAH was decided correctly
+Testing KMX
+KMX was decided correctly
+Testing CCL
+CCL was decided incorrectly
+Testing CAT
+CAT was decided incorrectly
+Testing CBG
+CBG was decided correctly
+Testing CBS
+CBS was decided correctly
+Testing CELG
+CELG was decided incorrectly
+Testing CNC
+CNC was decided incorrectly
+Testing CNP
+CNP was decided incorrectly
+Testing CTL
+CTL was decided incorrectly
+Testing CERN
+CERN was decided correctly
+Testing CF
+CF was decided correctly
+Testing SCHW
+SCHW was decided correctly
+Testing CHK
+CHK was decided incorrectly
+Testing CVX
+CVX was decided correctly
+Testing CMG
+CMG was decided correctly
+Testing CB
+CB was decided correctly
+Testing CHD
+CHD was decided incorrectly
+Testing CI
+CI was decided incorrectly
+Testing XEC
+XEC was decided correctly
+Testing CINF
+CINF was decided incorrectly
+Testing CTAS
+CTAS was decided correctly
+Testing CSCO
+CSCO was decided correctly
+Testing C
+C was decided correctly
+Testing CFG
+CFG was decided correctly
+Testing CTXS
+CTXS was decided incorrectly
+Testing CME
+CME was decided correctly
+Testing CMS
+CMS was decided correctly
+Testing COH
+COH was decided correctly
+Testing CTSH
+CTSH was decided correctly
+Testing CL
+CL was decided correctly
+Testing CMCSA
+CMCSA was decided correctly
+Testing CMA
+CMA was decided incorrectly
+Testing CAG
+CAG was decided correctly
+Testing CXO
+CXO was decided incorrectly
+Testing COP
+COP was decided correctly
+Testing ED
+ED was decided correctly
+Testing STZ
+STZ was decided incorrectly
+Testing GLW
+GLW was decided correctly
+Testing COST
+COST was decided incorrectly
+Testing CCI
+CCI was decided correctly
+Testing CSRA
+CSRA was decided correctly
+Testing CSX
+CSX was decided correctly
+Testing CMI
+CMI was decided correctly
+Testing CVS
+CVS was decided correctly
+Testing DHI
+DHI was decided correctly
+Testing DHR
+DHR was decided correctly
+Testing DRI
+DRI was decided incorrectly
+Testing DVA
+DVA was decided incorrectly
+Testing DE
+DE was decided incorrectly
+Testing DLPH
+DLPH was decided incorrectly
+Testing DAL
+DAL was decided correctly
+Testing XRAY
+XRAY was decided correctly
+Testing DVN
+DVN was decided correctly
+Testing DO
+DO was decided incorrectly
+Testing DLR
+DLR was decided correctly
+Testing DFS
+DFS was decided correctly
+Testing DISCA
+DISCA was decided incorrectly
+Testing DISCK
+DISCK was decided incorrectly
+Testing DG
+DG was decided incorrectly
+Testing DLTR
+DLTR was decided correctly
+Testing D
+D was decided incorrectly
+Testing DOV
+DOV was decided incorrectly
+Testing DOW
+DOW was decided incorrectly
+Testing DPS
+DPS was decided correctly
+Testing DTE
+DTE was decided correctly
+Testing DD
+DD was decided correctly
+Testing DUK
+DUK was decided incorrectly
+Testing DNB
+DNB was decided correctly
+Testing ETFC
+ETFC was decided incorrectly
+Testing EMN
+EMN was decided correctly
+Testing ETN
+ETN was decided correctly
+Testing EBAY
+EBAY was decided correctly
+Testing ECL
+ECL was decided correctly
+Testing EIX
+EIX was decided incorrectly
+Testing EW
+EW was decided incorrectly
+Testing EA
+EA was decided incorrectly
+Testing EMC
+EMC was decided correctly
+Testing EMR
+EMR was decided correctly
+Testing ENDP
+ENDP was decided incorrectly
+Testing ETR
+ETR was decided incorrectly
+Testing EOG
+EOG was decided incorrectly
+Testing EQT
+EQT was decided incorrectly
+Testing EFX
+EFX was decided incorrectly
+Testing EQIX
+EQIX was decided incorrectly
+Testing EQR
+EQR was decided incorrectly
+Testing ESS
+ESS was decided correctly
+Testing EL
+EL was decided correctly
+Testing ES
+ES was decided incorrectly
+Testing EXC
+EXC was decided incorrectly
+Testing EXPE
+EXPE was decided incorrectly
+Testing EXPD
+EXPD was decided correctly
+Testing ESRX
+ESRX was decided incorrectly
+Testing EXR
+EXR was decided correctly
+Testing XOM
+XOM was decided correctly
+Testing FFIV
+FFIV was decided incorrectly
+Testing FB
+FB was decided correctly
+Testing FAST
+FAST was decided correctly
+Testing FRT
+FRT was decided incorrectly
+Testing FDX
+FDX was decided correctly
+Testing FIS
+FIS was decided incorrectly
+Testing FITB
+FITB was decided incorrectly
+Testing FSLR
+FSLR was decided correctly
+Testing FE
+FE was decided incorrectly
+Testing FISV
+FISV was decided correctly
+Testing FLIR
+FLIR was decided correctly
+Testing FLS
+FLS was decided correctly
+Testing FLR
+FLR was decided incorrectly
+Testing FMC
+FMC was decided incorrectly
+Testing FTI
+FTI was decided correctly
+Testing FL
+FL was decided incorrectly
+Testing F
+F was decided incorrectly
+Testing FBHS
+FBHS was decided incorrectly
+Testing BEN
+BEN was decided incorrectly
+Testing FCX
+FCX was decided incorrectly
+Testing FTR
+FTR was decided incorrectly
+Testing GPS
+GPS was decided incorrectly
+Testing GRMN
+GRMN was decided correctly
+Testing GD
+GD was decided correctly
+Testing GE
+GE was decided incorrectly
+Testing GGP
+GGP was decided incorrectly
+Testing GIS
+GIS was decided correctly
+Testing GM
+GM was decided incorrectly
+Testing GPC
+GPC was decided incorrectly
+Testing GILD
+GILD was decided correctly
+Testing GPN
+GPN was decided incorrectly
+Testing GS
+GS was decided correctly
+Testing GT
+GT was decided correctly
+Testing GWW
+GWW was decided incorrectly
+Testing HAL
+HAL was decided correctly
+Testing HBI
+HBI was decided correctly
+Testing HOG
+HOG was decided incorrectly
+Testing HAR
+HAR was decided correctly
+Testing HRS
+HRS was decided incorrectly
+Testing HIG
+HIG was decided correctly
+Testing HAS
+HAS was decided incorrectly
+Testing HCA
+HCA was decided correctly
+Testing HCP
+HCP was decided correctly
+Testing HP
+HP was decided correctly
+Testing HSIC
+HSIC was decided correctly
+Testing HES
+HES was decided incorrectly
+Testing HPE
+HPE was decided incorrectly
+Testing HOLX
+HOLX was decided correctly
+Testing HD
+HD was decided correctly
+Testing HON
+HON was decided correctly
+Testing HRL
+HRL was decided correctly
+Testing HST
+HST was decided correctly
+Testing HPQ
+HPQ was decided correctly
+Testing HUM
+HUM was decided correctly
+Testing HBAN
+HBAN was decided correctly
+Testing ITW
+ITW was decided incorrectly
+Testing ILMN
+ILMN was decided correctly
+Testing IR
+IR was decided incorrectly
+Testing INTC
+INTC was decided incorrectly
+Testing ICE
+ICE was decided correctly
+Testing IBM
+IBM was decided incorrectly
+Testing IP
+IP was decided correctly
+Testing IPG
+IPG was decided correctly
+Testing IFF
+IFF was decided correctly
+Testing INTU
+INTU was decided incorrectly
+Testing ISRG
+ISRG was decided incorrectly
+Testing IVZ
+IVZ was decided correctly
+Testing IRM
+IRM was decided incorrectly
+Testing JBHT
+JBHT was decided incorrectly
+Testing JEC
+JEC was decided incorrectly
+Testing JNJ
+JNJ was decided incorrectly
+Testing JCI
+JCI was decided correctly
+Testing JPM
+JPM was decided correctly
+Testing JNPR
+JNPR was decided correctly
+Testing KSU
+KSU was decided correctly
+Testing K
+K was decided incorrectly
+Testing KEY
+KEY was decided incorrectly
+Testing KMB
+KMB was decided correctly
+Testing KIM
+KIM was decided correctly
+Testing KMI
+KMI was decided incorrectly
+Testing KLAC
+KLAC was decided incorrectly
+Testing KSS
+KSS was decided correctly
+Testing KHC
+KHC was decided correctly
+Testing KR
+KR was decided correctly
+Testing LB
+LB was decided correctly
+Testing LLL
+LLL was decided incorrectly
+Testing LH
+LH was decided correctly
+Testing LRCX
+LRCX was decided incorrectly
+Testing LM
+LM was decided correctly
+Testing LEG
+LEG was decided correctly
+Testing LEN
+LEN was decided correctly
+Testing LUK
+LUK was decided correctly
+Testing LVLT
+LVLT was decided correctly
+Testing LLY
+LLY was decided correctly
+Testing LNC
+LNC was decided incorrectly
+Testing LLTC
+LLTC was decided incorrectly
+Testing LKQ
+LKQ was decided correctly
+Testing LMT
+LMT was decided correctly
+Testing L
+L was decided correctly
+Testing LOW
+LOW was decided incorrectly
+Testing LYB
+LYB was decided correctly
+Testing MTB
+MTB was decided correctly
+Testing MAC
+MAC was decided incorrectly
+Testing M
+M was decided correctly
+Testing MNK
+MNK was decided incorrectly
+Testing MRO
+MRO was decided correctly
+Testing MPC
+MPC was decided correctly
+Testing MAR
+MAR was decided incorrectly
+Testing MMC
+MMC was decided correctly
+Testing MLM
+MLM was decided incorrectly
+Testing MAS
+MAS was decided correctly
+Testing MA
+MA was decided correctly
+Testing MAT
+MAT was decided correctly
+Testing MKC
+MKC was decided correctly
+Testing MCD
+MCD was decided correctly
+Testing MCK
+MCK was decided incorrectly
+Testing MJN
+MJN was decided correctly
+Testing MDT
+MDT was decided correctly
+Testing MRK
+MRK was decided incorrectly
+Testing MET
+MET was decided incorrectly
+Testing KORS
+KORS was decided correctly
+Testing MCHP
+MCHP was decided incorrectly
+Testing MU
+MU was decided correctly
+Testing MSFT
+MSFT was decided incorrectly
+Testing MHK
+MHK was decided correctly
+Testing TAP
+TAP was decided incorrectly
+Testing MDLZ
+MDLZ was decided incorrectly
+Testing MON
+MON was decided correctly
+Testing MNST
+MNST was decided incorrectly
+Testing MCO
+MCO was decided incorrectly
+Testing MS
+MS was decided correctly
+Testing MSI
+MSI was decided correctly
+Testing MUR
+MUR was decided incorrectly
+Testing MYL
+MYL was decided correctly
+Testing NDAQ
+NDAQ was decided correctly
+Testing NOV
+NOV was decided incorrectly
+Testing NAVI
+NAVI was decided incorrectly
+Testing NTAP
+NTAP was decided correctly
+Testing NFLX
+NFLX was decided correctly
+Testing NWL
+NWL was decided incorrectly
+Testing NFX
+NFX was decided incorrectly
+Testing NEM
+NEM was decided incorrectly
+Testing NWSA
+NWSA was decided correctly
+Testing NWS
+NWS was decided correctly
+Testing NEE
+NEE was decided correctly
+Testing NLSN
+NLSN was decided incorrectly
+Testing NKE
+NKE was decided correctly
+Testing NI
+NI was decided incorrectly
+Testing NBL
+NBL was decided incorrectly
+Testing JWN
+JWN was decided correctly
+Testing NSC
+NSC was decided correctly
+Testing NTRS
+NTRS was decided correctly
+Testing NOC
+NOC was decided correctly
+Testing NRG
+NRG was decided correctly
+Testing NUE
+NUE was decided correctly
+Testing NVDA
+NVDA was decided incorrectly
+Testing ORLY
+ORLY was decided correctly
+Testing OXY
+OXY was decided correctly
+Testing OMC
+OMC was decided correctly
+Testing OKE
+OKE was decided incorrectly
+Testing ORCL
+ORCL was decided incorrectly
+Testing OI
+OI was decided incorrectly
+Testing PCAR
+PCAR was decided correctly
+Testing PH
+PH was decided incorrectly
+Testing PDCO
+PDCO was decided incorrectly
+Testing PAYX
+PAYX was decided correctly
+Testing PYPL
+PYPL was decided correctly
+Testing PNR
+PNR was decided incorrectly
+Testing PBCT
+PBCT was decided correctly
+Testing PEP
+PEP was decided correctly
+Testing PKI
+PKI was decided incorrectly
+Testing PRGO
+PRGO was decided incorrectly
+Testing PFE
+PFE was decided incorrectly
+Testing PCG
+PCG was decided incorrectly
+Testing PM
+PM was decided correctly
+Testing PSX
+PSX was decided incorrectly
+Testing PNW
+PNW was decided correctly
+Testing PXD
+PXD was decided correctly
+Testing PBI
+PBI was decided correctly
+Testing PNC
+PNC was decided correctly
+Testing RL
+RL was decided incorrectly
+Testing PPG
+PPG was decided correctly
+Testing PPL
+PPL was decided correctly
+Testing PX
+PX was decided incorrectly
+Testing PCLN
+PCLN was decided correctly
+Testing PFG
+PFG was decided correctly
+Testing PG
+PG was decided correctly
+Testing PGR
+PGR was decided incorrectly
+Testing PLD
+PLD was decided correctly
+Testing PRU
+PRU was decided correctly
+Testing PEG
+PEG was decided correctly
+Testing PSA
+PSA was decided correctly
+Testing PHM
+PHM was decided incorrectly
+Testing PVH
+PVH was decided incorrectly
+Testing QRVO
+QRVO was decided correctly
+Testing QCOM
+QCOM was decided correctly
+Testing PWR
+PWR was decided incorrectly
+Testing DGX
+DGX was decided correctly
+Testing RRC
+RRC was decided incorrectly
+Testing RTN
+RTN was decided incorrectly
+Testing O
+O was decided correctly
+Testing RHT
+RHT was decided correctly
+Testing REGN
+REGN was decided incorrectly
+Testing RF
+RF was decided correctly
+Testing RSG
+RSG was decided incorrectly
+Testing RAI
+RAI was decided incorrectly
+Testing RHI
+RHI was decided correctly
+Testing ROK
+ROK was decided incorrectly
+Testing COL
+COL was decided incorrectly
+Testing ROP
+ROP was decided incorrectly
+Testing ROST
+ROST was decided incorrectly
+Testing RCL
+RCL was decided correctly
+Testing R
+R was decided incorrectly
+Testing SPGI
+SPGI was decided incorrectly
+Testing CRM
+CRM was decided incorrectly
+Testing SCG
+SCG was decided correctly
+Testing SLB
+SLB was decided incorrectly
+Testing SNI
+SNI was decided correctly
+Testing STX
+STX was decided correctly
+Testing SEE
+SEE was decided incorrectly
+Testing SRE
+SRE was decided incorrectly
+Testing SHW
+SHW was decided incorrectly
+Testing SIG
+SIG was decided incorrectly
+Testing SPG
+SPG was decided correctly
+Testing SWKS
+SWKS was decided correctly
+Testing SLG
+SLG was decided incorrectly
+Testing SJM
+SJM was decided correctly
+Testing SNA
+SNA was decided correctly
+Testing SO
+SO was decided incorrectly
+Testing LUV
+LUV was decided correctly
+Testing SWN
+SWN was decided correctly
+Testing SE
+SE was decided incorrectly
+Testing STJ
+STJ was decided incorrectly
+Testing SWK
+SWK was decided correctly
+Testing SPLS
+SPLS was decided correctly
+Testing SBUX
+SBUX was decided correctly
+Testing HOT
+HOT was decided correctly
+Testing STT
+STT was decided correctly
+Testing SRCL
+SRCL was decided correctly
+Testing SYK
+SYK was decided correctly
+Testing STI
+STI was decided incorrectly
+Testing SYMC
+SYMC was decided correctly
+Testing SYF
+SYF was decided incorrectly
+Testing SYY
+SYY was decided incorrectly
+Testing TROW
+TROW was decided incorrectly
+Testing TGT
+TGT was decided incorrectly
+Testing TEL
+TEL was decided incorrectly
+Testing TGNA
+TGNA was decided incorrectly
+Testing TDC
+TDC was decided correctly
+Testing TSO
+TSO was decided incorrectly
+Testing TXN
+TXN was decided correctly
+Testing TXT
+TXT was decided correctly
+Testing BK
+BK was decided correctly
+Testing CLX
+CLX was decided incorrectly
+Testing KO
+KO was decided incorrectly
+Testing HSY
+HSY was decided correctly
+Testing MOS
+MOS was decided correctly
+Testing TRV
+TRV was decided incorrectly
+Testing DIS
+DIS was decided correctly
+Testing TMO
+TMO was decided correctly
+Testing TIF
+TIF was decided correctly
+Testing TWX
+TWX was decided incorrectly
+Testing TJX
+TJX was decided incorrectly
+Testing TMK
+TMK was decided incorrectly
+Testing TSS
+TSS was decided correctly
+Testing TSCO
+TSCO was decided correctly
+Testing TDG
+TDG was decided correctly
+Testing RIG
+RIG was decided correctly
+Testing TRIP
+TRIP was decided correctly
+Testing FOXA
+FOXA was decided correctly
+Testing FOX
+FOX was decided incorrectly
+Testing TYC
+TYC was decided incorrectly
+Testing TSN
+TSN was decided correctly
+Testing USB
+USB was decided correctly
+Testing UDR
+UDR was decided correctly
+Testing ULTA
+ULTA was decided incorrectly
+Testing UNP
+UNP was decided correctly
+Testing UAL
+UAL was decided correctly
+Testing UNH
+UNH was decided incorrectly
+Testing UPS
+UPS was decided incorrectly
+Testing URI
+URI was decided correctly
+Testing UTX
+UTX was decided incorrectly
+Testing UHS
+UHS was decided correctly
+Testing UNM
+UNM was decided incorrectly
+Testing URBN
+URBN was decided correctly
+Testing VFC
+VFC was decided correctly
+Testing VLO
+VLO was decided incorrectly
+Testing VAR
+VAR was decided incorrectly
+Testing VTR
+VTR was decided correctly
+Testing VRSN
+VRSN was decided incorrectly
+Testing VRSK
+VRSK was decided correctly
+Testing VZ
+VZ was decided incorrectly
+Testing VRTX
+VRTX was decided incorrectly
+Testing VIAB
+VIAB was decided incorrectly
+Testing V
+V was decided correctly
+Testing VNO
+VNO was decided correctly
+Testing VMC
+VMC was decided incorrectly
+Testing WMT
+WMT was decided incorrectly
+Testing WBA
+WBA was decided correctly
+Testing WM
+WM was decided incorrectly
+Testing WAT
+WAT was decided incorrectly
+Testing WFC
+WFC was decided correctly
+Testing HCN
+HCN was decided incorrectly
+Testing WDC
+WDC was decided incorrectly
+Testing WU
+WU was decided incorrectly
+Testing WRK
+WRK was decided correctly
+Testing WY
+WY was decided incorrectly
+Testing WHR
+WHR was decided correctly
+Testing WFM
+WFM was decided correctly
+Testing WMB
+WMB was decided correctly
+Testing WLTW
+WLTW was decided incorrectly
+Testing WEC
+WEC was decided correctly
+Testing WYN
+WYN was decided correctly
+Testing WYNN
+WYNN was decided incorrectly
+Testing XEL
+XEL was decided correctly
+Testing XRX
+XRX was decided correctly
+Testing XLNX
+XLNX was decided incorrectly
+Testing XL
+XL was decided incorrectly
+Testing XYL
+XYL was decided incorrectly
+Testing YHOO
+YHOO was decided correctly
+Testing YUM
+YUM was decided incorrectly
+Testing ZBH
+ZBH was decided incorrectly
+Testing ZION
+ZION was decided incorrectly
+Testing ZTS
+ZTS was decided correctly

@@ -115,14 +115,14 @@ class NeuralNetwork(object):
         # connections going to the output layer, -1, we need to find nabla_w[-1]
         # nabla_w[l][j][k] = a[l-1][k] x delta[l][j]
         # where a[l-1][k] is the vector of activations of the neurons in the previous layer
-        nabla_w[-1] = np.matmul([[d] for d in delta], [activations[-2]])
+        nabla_w[-1] = np.dot([[d] for d in delta], [activations[-2]])
 
         for l in xrange(2, len(self.sizes)):
             z = zs[-l]
             zp = sigmoidprime(z) # z'
             delta = np.dot(np.transpose(self.weights[-l+1]), delta) * zp
             nabla_b[-l] = delta
-            nabla_w[-l] = np.matmul([[d] for d in delta], [activations[-l-1]])
+            nabla_w[-l] = np.dot([[d] for d in delta], [activations[-l-1]])
 
         return (nabla_b, nabla_w)
 
