@@ -7,10 +7,52 @@
 \usepackage[numbers,sort]{natbib}
 \usepackage{url}
 \usepackage[super]{nth}
+\usepackage{filecontents}
 
 \begin{document}
 
-\date{\today}
+\begin{filecontents}{\jobname.bib}
+@article{investopedia,
+   author = {{Investopedia}},
+    title = "{If You Had Invested Right After Amazon's IPO}",
+     year = 2015,
+    month = aug,
+   adsurl = {http://www.investopedia.com/articles/investing/082715/if-you-had-invested-right-after-amazons-ipo.asp}
+}
+
+@article{yahooapple,
+   author = {{Yahoo}},
+    title = "{Apple Inc. (AAPL)}",
+     year = 2017,
+    month = feb,
+   adsurl = {https://finance.yahoo.com/quote/AAPL?ltr=1}
+}
+
+@article{yahooamazon,
+   author = {{Yahoo}},
+    title = "{Amazon.com Inc. (AMZN)}",
+     year = 2017,
+    month = feb,
+   adsurl = {https://finance.yahoo.com/quote/AMZN?ltr=1}
+}
+
+@article{wired,
+   author = {{Cade Metz}},
+    title = "{The Rise of the Artificially Intelligent Hedge Fund}",
+     year = 2016,
+    month = jan,
+   adsurl = {https://www.wired.com/2016/01/the-rise-of-the-artificially-intelligent-hedge-fund/#slide-1}
+}
+
+@article{hurwitz,
+   author = {Hurwit, Evan and Marwala, Tshilidzi},
+    title = "{State of the Art Review for Applying Computational Intelligence and Machine Learning Techniques to Portfolio Optimisation}",
+     year = 2009,
+    month = oct
+}
+\end{filecontents}
+
+\date{2017 March 6}
 
 \title{Application of a Shallow Neural Network to Short-Term Stock Trading}
 
@@ -104,6 +146,6 @@ Changes to the configurations of the neural network, such as its dimensions and 
 \section{Acknowledgements}
 The authors thank hackNYU for providing food, drink, lodging, internet access, and countless other utilities during the development of the neural network. We also thank Yahoo for freely distributing stock data. We also thank Rufus Pollock for distributing a list of the tickers of the S\&P 500 companies.
 
-\bibliography{thebibliography}
+\bibliography{\jobname}
 
 \end{document}
